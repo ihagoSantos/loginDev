@@ -1,0 +1,97 @@
+/* vh -> viewport heigth */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*a medida da borda é contada junto com largura e altura*/
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.container {
+    display: flex; /*posiciona uma div ao lado da outra - default -> linha*/
+    justify-content: center; /*alinha horizontalmente no centro*/
+    align-items: center; /*alinha verticalment no centro*/
+    height: 100vh;
+
+    background-color: #eee;
+}
+.content{
+    background-color: white;
+    width: 80%;
+    height: 50%;
+    border-radius: 15px;
+
+    display: flex; /*posiciona uma div ao lado da outra - default -> linha*/
+    justify-content: space-between;/*coloca um espaço entre as divs*/
+    align-items: center;/*alinha verticalment no centro*/
+
+    position: relative;
+
+}
+.content::before{
+    content: "";
+    position: absolute;
+    background-color: purple;
+    width: 40%;
+    height: 100%;
+}
+.first-content{
+    display: flex; /*posiciona uma div ao lado da outra - default -> linha*/
+}
+.title{
+    
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize; /*coloca a primeira letra de cada palavra em caixa alta*/
+}
+.title-primary{
+    color: white;
+}
+.description{
+    font-size: 14px;
+    font-weight: 300;
+    color:#fff;
+    line-height: 30px;
+}
+.first-column{
+    text-align: center;
+    flex: 1 0 auto;
+    z-index: 10;
+}
+.btn{
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 10px;
+    padding: 10px 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-primary{
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.btn-primary:hover{
+    background-color: #fff;
+    color: purple;
+}
+.second-column{
+    flex: 2 0 auto;
+}
+.second-content{
+    position: absolute;/*Sobrepõe uma div a outra -> ler mais sobre position*/
+    display: none;
+}
+
+.list-social-media{
+    display: flex; /*posiciona uma div ao lado da outra - default -> linha*/
+}
+
+.form{
+    display: flex; /*posiciona uma div ao lado da outra - default -> linha*/
+    flex-direction: column; /*a direçao é vertical*/
+}
